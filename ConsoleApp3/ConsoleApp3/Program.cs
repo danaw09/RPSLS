@@ -10,7 +10,10 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-          Game mygame  = new Game();
+            Game mygame = new Game();
+            mygame.Rules();
+
+
         }
     }
 }

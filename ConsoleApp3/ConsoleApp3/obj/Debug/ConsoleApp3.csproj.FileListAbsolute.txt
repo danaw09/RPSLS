@@ -9,3 +9,6 @@ C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj
 C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
 C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.exe
 C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
+C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\bin\Debug\ConsoleApp3.pdb

@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
-    class Computer
+    
+    class Computer: player
     {
+        //member variables
+        public void ComputerPlayer()
+        {
+            this.name = "Computer";
+        }
+
+
+        public Random randomNumber = new Random();
+
+        //constuctor
+
+
+
+        //method
+
     }
 }
