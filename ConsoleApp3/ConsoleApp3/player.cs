@@ -41,6 +41,7 @@ namespace ConsoleApp3
             Console.ResetColor();
             Console.WriteLine("\n");
         }
+
        
 
 
@@ -104,7 +105,7 @@ namespace ConsoleApp3
             }
 
 
-            public void PlayResults()
+            void PlayResults()
             {
 
                 bool BothTie = false;
