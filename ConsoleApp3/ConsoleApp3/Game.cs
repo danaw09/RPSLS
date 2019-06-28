@@ -11,13 +11,14 @@ namespace ConsoleApp3
         //member variables
         public bool gameOver;
         public bool TwoPlayerMode;
-        int randomInt;
+     
         player player1;
         player player2;
         int winGame = 2;
         private string userinput;
         private readonly int gameMode;
-
+        public string int32; 
+      
 
 
 
@@ -50,11 +51,20 @@ namespace ConsoleApp3
 
             GetMode();
 
-            GetUserInput();
+            PrepareGame();
 
             SetGameMode();
+
+            PlayGameRounds();
+
+           
         }
 
+        public void PlayGameRounds()
+        {
+            Console.Clear();
+            PrepareGame();
+        }
         public void SetGameMode()
         {
             
@@ -89,7 +99,7 @@ namespace ConsoleApp3
             Console.ReadLine();
         }
 
-        public string GetUserInput()
+        public string GetInput()
         {
             string userInput = Console.ReadKey(true).KeyChar.ToString();
             return userInput;
@@ -98,18 +108,20 @@ namespace ConsoleApp3
 
         public string GetMode()
         {
-            string userInput = GetUserInput();
+            string userInput = GetInput();
             if (!(userInput == "1" || userInput == "2"))
             {
                 Console.Clear();
                 return GetMode();
 
             }
-            return (userInput);
+            return Int32(userInput);
         }
-           
-        
 
+         string Int32(string userInput)
+        {
+           throw new NotImplementedException();
+       }
 
         public void Rules()
         {
@@ -128,7 +140,7 @@ namespace ConsoleApp3
 
 
        
-        public void SetUpGame()
+        public void PrepareGame()
         {
             gameOver = false;
 
@@ -148,7 +160,7 @@ namespace ConsoleApp3
 
         }
 
-
+        
 
 
         public void getPlayerResults()

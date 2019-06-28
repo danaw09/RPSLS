@@ -23,7 +23,7 @@ namespace ConsoleApp3
         //public override void Choose Gesture(List<strings> gestures);
         //constuc
 
-
+        public abstract void GetgameGestures(List<string> gameGestures)
 
 
         //method

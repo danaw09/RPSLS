@@ -8,5 +8,10 @@ namespace ConsoleApp3
 {
     class abstract_class
     {
+        public abstract_class ()
+        {
+            public void myGestures();
+
+        }
     }
 }

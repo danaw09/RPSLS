@@ -35,14 +35,21 @@ namespace ConsoleApp3
                 }
             }
             Console.ResetColor();
-            Console.WriteLine("\n")
+            Console.WriteLine("\n");
 
+            public abstract class getgestures 
+        {
+            public void gameGestures();
 
-         public abstract void GameGestures(List<string> gameGestures);
+        }
+
 
 
 
         //constuctor
+
+
+
 
 
 
