@@ -47,20 +47,20 @@ namespace ConsoleApp3
         {
             
             Rules();
-
             VsMode();
-            PrepareGame();
-            GetMode();
-
+            GetMode(); 
+            SetGameMode();
+         
         }
 
         public void PlayGameRounds()
         {
             Console.Clear();
             PrepareGame();
+            
         }
         public void SetGameMode()
-        {
+        {       PlayGameRounds();
             
                 if (gameMode == 2)
                 {
@@ -70,6 +70,7 @@ namespace ConsoleApp3
                 {
                     TwoPlayerMode = false;
                 }
+                Console.ReadLine();
             
         }
 
@@ -103,7 +104,7 @@ namespace ConsoleApp3
 
         public string GetMode()
         {
-            string userInput = GetInput();
+            string userInput = userInput;
             if (!(userInput == "1" || userInput == "2"))
             {
                 Console.Clear();
