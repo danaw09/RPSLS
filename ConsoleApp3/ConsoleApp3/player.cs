@@ -9,26 +9,33 @@ namespace ConsoleApp3
     class player
     {
         //member variables
-        public string name;
-        public int numberOfWins;
         int score;
-        string gesture;
+        public int numberOfWins;
+      
+        public List<string> gestures;
 
-        public List<string> gestures = new List<string>() { "Rock", "Paper", "Scissors", "Spock", "Lizard" };
+        public List<string> Gestures = new List<string>() { "Rock", "Paper", "Scissors", "Spock", "Lizard" };
+        internal string name;
+
+
+        
+        
+
+
         //constuctor
 
 
 
-        public void Player()
-        {
-            numberOfWins = 0;
-        }
 
 
-        //method
 
-        // public abstract void gesture(List<string> gestures);
 
-        //public abstract void 
+
+
+
+
+
+
+
     }
 }

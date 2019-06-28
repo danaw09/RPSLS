@@ -10,6 +10,9 @@ namespace ConsoleApp3
     class Computer: player
     {
         //member variables
+        public string myRandomNumber;
+        
+
         public void ComputerPlayer()
         {
             this.name = "Computer";
@@ -17,6 +20,7 @@ namespace ConsoleApp3
 
 
         public Random randomNumber = new Random();
+       
 
         //constuctor
 
