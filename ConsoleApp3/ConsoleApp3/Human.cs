@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
-    class Human: player
+    class Human : player
     {
         public Human()
         {
@@ -18,15 +18,24 @@ namespace ConsoleApp3
             Console.WriteLine(name + ": please make your selection:");
             Console.ReadLine();
         }
-        //member variables
 
-        //public override void Choose Gesture(List<strings> gestures);
-        //constuc
+        public override void GetGesture()
+        {
+            DisplayPlayerInterface();
+            int userSelectionNumber;
+            string userSelection = Console.ReadKey(true).KeyChar.ToString();
+            if (!int.TryParse(userSelection, out userSelectionNumber) || !(userSelectionNumber >= 0) || !(userSelectionNumber <= 4))
+            {
+                Console.Clear();
+                GetGesture();
+            }
+            else
+            {
+                currentSelection = userSelectionNumber;
+            }
 
-        public abstract void GetgameGestures(List<string> gameGestures)
 
 
-        //method
-
+        }
     }
 }

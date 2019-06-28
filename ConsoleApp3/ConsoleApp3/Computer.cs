@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
-    
-    class Computer: player
+
+    class Computer : player
     {
         //member variables
         public string myRandomNumber;
-        
+
 
         public void ComputerPlayer()
         {
@@ -21,12 +21,19 @@ namespace ConsoleApp3
 
         public Random randomNumber = new Random();
 
-
+      
         //constuctor
-        public abstract void GetgameGestures(List<string> gameGestures)
+        public override void GetGesture()
+        {
+            currentSelection = randomNumber.Next(5);
+           
+        }
 
 
-        //method
 
     }
+
+           //method
+
 }
+
