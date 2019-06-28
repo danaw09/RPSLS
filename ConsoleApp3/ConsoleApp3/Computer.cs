@@ -20,10 +20,10 @@ namespace ConsoleApp3
 
 
         public Random randomNumber = new Random();
-       
+
 
         //constuctor
-
+        public abstract void GetgameGestures(List<string> gameGestures)
 
 
         //method

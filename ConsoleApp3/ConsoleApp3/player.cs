@@ -11,15 +11,35 @@ namespace ConsoleApp3
         //member variables
         int score;
         public int numberOfWins;
-      
-        public List<string> gestures;
+        public int currentSelection;
 
-        public List<string> Gestures = new List<string>() { "Rock", "Paper", "Scissors", "Spock", "Lizard" };
+
+
+        public static List<string> gameGestures = new List<string>() { "Rock", "Paper", "Scissors", "Spock", "Lizard" };
         internal string name;
 
+        public void DisplayPlayerMenu()
+        {
+            for (int i = 0; i < gameGestures.Count(); i++)
+            {
+                Console.Write(i);
 
-        
-        
+                Console.Write(" = ");
+
+                Console.Write(gameGestures[i]);
+
+                if (i < gameGestures.Count() - 1)
+                {
+                    Console.ResetColor();
+                    Console.Write("  |  ");
+                }
+            }
+            Console.ResetColor();
+            Console.WriteLine("\n")
+
+
+         public abstract void GameGestures(List<string> gameGestures);
+
 
 
         //constuctor

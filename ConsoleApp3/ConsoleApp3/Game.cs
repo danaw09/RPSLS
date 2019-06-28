@@ -15,11 +15,13 @@ namespace ConsoleApp3
         player player1;
         player player2;
         int winGame = 2;
+        private string userinput;
+        private readonly int gameMode;
 
-        
 
-        
-       
+
+
+
 
 
 
@@ -40,16 +42,34 @@ namespace ConsoleApp3
 
 
 
-        public void  DisplayGame()
+        public void DisplayGame()
         {
             Rules();
-            
-            VsMode ();
 
-           
+            VsMode();
+
+            GetMode();
+
+            GetUserInput();
+
+            SetGameMode();
         }
 
-        private void VsMode()
+        public void SetGameMode()
+        {
+            
+                if (gameMode == 2)
+                {
+                    TwoPlayerMode = true;
+                }
+                else
+                {
+                    TwoPlayerMode = false;
+                }
+            
+        }
+
+        public void VsMode()
         {
             Console.Write("\nPress ");
 
@@ -69,35 +89,45 @@ namespace ConsoleApp3
             Console.ReadLine();
         }
 
-        public  void Rules()
+        public string GetUserInput()
         {
-          
-            Console.WriteLine("Hello and welcome to a new and challenging game\n");
+            string userInput = Console.ReadKey(true).KeyChar.ToString();
+            return userInput;
+        }
+
+
+        public string GetMode()
+        {
+            string userInput = GetUserInput();
+            if (!(userInput == "1" || userInput == "2"))
+            {
+                Console.Clear();
+                return GetMode();
+
+            }
+            return (userInput);
+        }
+           
+        
+
+
+        public void Rules()
+        {
+
+            Console.WriteLine("Hello and welcome to Big Bang Theory inspired game\n");
+
             Console.WriteLine("RULES:");
-           Console.WriteLine("This game is called rock, Paper, Scissors, lizard Spock from big bang theory,in each round, each player picks a variable by pressing keys 0-6:");
-           
-            Console.WriteLine("The winner of each round is the player who defeats the other.\nIn a tie, the process is repeated until a round winner is found.\nThe first player to achieve best of three wins the game.\n");
-           
-            Console.WriteLine("DURING EACH ROUND:");
           
+            Console.WriteLine("DURING EACH ROUND:");
+
             Console.WriteLine("Scissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\nRock blunts Scissors");
             Console.ReadLine();
             Console.Clear();
         }
 
 
-        
-        public void SetGameMode(int gameMode)
-        {
-            if (gameMode == 2)
-            {
-                TwoPlayerMode = true;
-            }
-            else
-            {
-                TwoPlayerMode = false;
-            }
-        }
+
+       
         public void SetUpGame()
         {
             gameOver = false;
@@ -115,7 +145,7 @@ namespace ConsoleApp3
             {
                 player2 = new Computer();
             }
-           
+
         }
 
 
@@ -125,15 +155,20 @@ namespace ConsoleApp3
         {
             if (player1.numberOfWins == 1)
             {
-                Console.WriteLine( "p1 win");
+                Console.WriteLine("p1 win");
             }
             else
             {
                 Console.WriteLine("computer wins!");
             }
-        }
 
 
 
-    }
+
+
+
+
+
+   }    } 
+
 }
