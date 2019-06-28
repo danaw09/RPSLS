@@ -45,19 +45,13 @@ namespace ConsoleApp3
 
         public void DisplayGame()
         {
+            
             Rules();
 
             VsMode();
-
+            PrepareGame();
             GetMode();
 
-            PrepareGame();
-
-            SetGameMode();
-
-             PlayRound ();
-
-           
         }
 
         public void PlayGameRounds()
@@ -99,6 +93,7 @@ namespace ConsoleApp3
             Console.ReadLine();
         }
 
+
         public string GetInput()
         {
             string userInput = Console.ReadKey(true).KeyChar.ToString();
@@ -118,10 +113,7 @@ namespace ConsoleApp3
             return Int32(userInput);
         }
 
-         string Int32(string userInput)
-        {
-           throw new NotImplementedException();
-       }
+        
 
         public void Rules()
         {
@@ -142,7 +134,7 @@ namespace ConsoleApp3
        
         public void PrepareGame()
         {
-            gameOver = false;
+            //gameOver = false;
 
             player1 = new Human();
 

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
-    abstract class PlayerResults
+    abstract class Player
     {
         //member variables
         int score;
         public int numberOfWins;
         public int currentSelection;
-        public PlayerResults player1;
-        public PlayerResults player2;
+        public Player player1;
+        public Player player2;
         public PlayerResults currentselection;
 
         public static List<string> gameGestures = new List<string>() { "Rock", "Paper", "Scissors", "Spock", "Lizard" };
@@ -41,7 +41,11 @@ namespace ConsoleApp3
             Console.ResetColor();
             Console.WriteLine("\n");
         }
+       
 
+
+
+        ///////////////////////////////////////////////
         private void DisplayPlayerInterface()
         {
             Console.WriteLine(name + ": please make your selection:");
@@ -57,10 +61,29 @@ namespace ConsoleApp3
             player2.DisplayPlayerInterface();
             PlayerResults();
         }
+            
+
+        public PlayRound ()
+	{
+            Console.Clear();
+            PrepareGame;
+            while (!isGameOver)
+            {
+                PlaySingleRound();
+                isGameOver = GetIsGameOver();
+                if (!isGameOver)
+                {
+                    GetAnyKeyToContinue();
+                }
+            }
+           
+        }
+	}
 
 
 
-        public PlayerResults(PlayerResults player1, PlayerResults player2)
+
+        public PlayerResults()
         {
             int numberOfVariables = gameGestures.Count();
             int roundWinDeterminer = (numberOfVariables + player1.currentSelection - player2.currentSelection) % numberOfVariables;
@@ -98,13 +121,7 @@ namespace ConsoleApp3
             }
 
 
-     }   }
-
-
-
-
-
-}
+ }      }
 
 
 
@@ -124,5 +141,10 @@ namespace ConsoleApp3
 
 
 
-    }
-}
+
+
+
+
+
+
+    
