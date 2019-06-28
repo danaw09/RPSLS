@@ -55,7 +55,7 @@ namespace ConsoleApp3
 
             SetGameMode();
 
-            PlayGameRounds();
+             PlayRound ();
 
            
         }
@@ -148,9 +148,9 @@ namespace ConsoleApp3
 
             if (TwoPlayerMode)
             {
-                player2 = new Human
+                player2 = new Human();
                 {
-                    name = "Player 2"
+                    name = "Player 2";
                 };
             }
             else
@@ -176,6 +176,12 @@ namespace ConsoleApp3
 
 
 
+            public void GetAnyKeyToContinue()
+        {
+            Console.WriteLine("\nPress any key to continue.");
+            Console.ReadKey();
+            Console.Clear();
+        }
 
 
 

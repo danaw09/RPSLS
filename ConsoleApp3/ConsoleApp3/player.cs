@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp3
 {
-    abstract class player
+    abstract class PlayerResults
     {
         //member variables
         int score;
         public int numberOfWins;
         public int currentSelection;
-        public player player1;
-        public  player player2;
+        public PlayerResults player1;
+        public PlayerResults player2;
+        public PlayerResults currentselection;
 
         public static List<string> gameGestures = new List<string>() { "Rock", "Paper", "Scissors", "Spock", "Lizard" };
         internal string name;
         private object player1reults;
+        private object winner;
+        private object loser;
 
         public void DisplayPlayerMenu()
         {
@@ -45,37 +48,65 @@ namespace ConsoleApp3
         }
         public abstract void GetGesture();
 
-        
+
         private void PlaySingleRound()
         {
             player1.GetGesture();
             player2.GetGesture();
             player1.DisplayPlayerInterface();
             player2.DisplayPlayerInterface();
+            PlayerResults();
         }
 
 
 
-        public player(player player1, player player2)
+        public PlayerResults(PlayerResults player1, PlayerResults player2)
         {
             int numberOfVariables = gameGestures.Count();
             int roundWinDeterminer = (numberOfVariables + player1.currentSelection - player2.currentSelection) % numberOfVariables;
             if (roundWinDeterminer == 0)
-
-        }
-
-        public PlayResults()
-        {
-
-            if (player1reults = player1reults)
             {
-                Console.ResetColor();
-                Console.Write("  |  ");
+                PlayResults();
+
             }
-        }
+            else if (roundWinDeterminer % 2 == 1)
+            {
+                PlayResults();
+                player1.numberOfWins++;
+            }
+            else
+            {
+                PlayResults();
+                player2.numberOfWins++;
+            }
 
 
-        //constuctor
+            public void PlayResults()
+            {
+
+                bool BothTie = false;
+                if (BothTie)
+                {
+                    Console.WriteLine("{0} and {1} Tie The Round.");
+                }
+                else
+                {
+                    Console.WriteLine("{0} Wins The Round!");
+
+                }
+
+            }
+
+
+     }   }
+
+
+
+
+
+}
+
+
 
 
 
