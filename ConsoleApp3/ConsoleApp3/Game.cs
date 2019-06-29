@@ -9,31 +9,38 @@ namespace ConsoleApp3
     class Game
     {
         //member variables
-        public bool gameOver;
+     
         public bool TwoPlayerMode;
      
-        player player1;
-        player player2;
-        int winGame = 2;
+       public string player1;
+        public string player2;
+       
         private string userinput;
         private readonly int gameMode;
         public string int32; 
       
 
-
+        public void DisplayGame()
+        {
+            
+         VsMode();
+         GetMode();
+        PrepareGame();
+        }
 
         
         
+
     }
 }
 
 
 
 
-        //constuctor
+     
         public void playerOne()
         {
-            player1 = new player();
+          player1 = new player();
         }
 
 
@@ -42,10 +49,10 @@ namespace ConsoleApp3
         {
             player2 = new player();
         }
-        //method
+       
 
 
-
+            
         
 
         public void PlayGameRounds()
@@ -87,6 +94,9 @@ namespace ConsoleApp3
 
             Console.WriteLine("2-Player Mode");
             Console.ReadLine();
+            Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0116	A namespace cannot directly contain members such as fields or methods	C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\ConsoleApp3.csproj	C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\Game.cs	79	
+
         }
 
 
@@ -130,7 +140,7 @@ namespace ConsoleApp3
        
         public void PrepareGame()
         {
-            //gameOver = false;
+           
 
             player1 = new Human();
 
@@ -145,7 +155,7 @@ namespace ConsoleApp3
             {
                 player2 = new Computer();
             }
-
+            Console.Clear();
         }
 
         

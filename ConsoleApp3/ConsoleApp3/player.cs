@@ -14,7 +14,7 @@ namespace ConsoleApp3
         public int currentSelection;
         public Player player1;
         public Player player2;
-        public PlayerResults currentselection;
+       
 
         public static List<string> gameGestures = new List<string>() { "Rock", "Paper", "Scissors", "Spock", "Lizard" };
         internal string name;
@@ -103,6 +103,8 @@ namespace ConsoleApp3
                 PlayResults();
                 player2.numberOfWins++;
             }
+              return results;
+
 
 
             void PlayResults()

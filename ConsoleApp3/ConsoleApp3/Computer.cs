@@ -19,15 +19,6 @@ namespace ConsoleApp3
         }
 
 
-        public void DisplayGame()
-        {
-            
-         VsMode();
-         GetMode();
-        PrepareGame();
-        }
-
-
         public Random randomNumber = new Random();
 
       
