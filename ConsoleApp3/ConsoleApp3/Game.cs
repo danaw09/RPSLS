@@ -94,9 +94,6 @@ namespace ConsoleApp3
 
             Console.WriteLine("2-Player Mode");
             Console.ReadLine();
-            Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS0116	A namespace cannot directly contain members such as fields or methods	C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\ConsoleApp3.csproj	C:\Users\dana\Desktop\RPSLS\ConsoleApp3\ConsoleApp3\Game.cs	79	
-
         }
 
 
